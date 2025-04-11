@@ -2,6 +2,8 @@
 
 Site institucional do FounderPilot AI, um assistente estratégico de IA para fundadores de startups.
 
+![FounderPilot AI Screenshot](https://via.placeholder.com/1200x630/0a0a0a/5656ff?text=FounderPilot+AI)
+
 ## 📋 Sobre o Projeto
 
 FounderPilot AI é uma plataforma de inteligência artificial estratégica desenvolvida para ajudar fundadores de startups a tomar decisões baseadas em dados. O site apresenta as funcionalidades, benefícios e o processo de inscrição na lista de espera para acesso antecipado.
@@ -110,10 +112,11 @@ Para um melhor desempenho no deploy, considere adicionar um arquivo `vercel.json
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
 ```
 
